@@ -78,13 +78,13 @@ public class GoodsController {
                     goods.getGoodsImagesSet().add(goodsImage);
                     goodsImageList.add(goodsImage); //存储goodsImage
                 }
-                goodsRepository.save(goods);
             }catch (Exception e){
                 //打印错误堆栈信息
                 e.printStackTrace();
             }
             String firstImagePath = goodsImageList.get(0).getImageUrl();
             goods.setGoodsImage(firstImagePath);
+            goodsRepository.save(goods);
 
             return new JsonObjectResult(ResultCode.SUCCESS, "上传数据成功",goods);
         }else {
