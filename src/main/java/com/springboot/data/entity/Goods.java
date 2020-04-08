@@ -37,14 +37,8 @@ public class Goods implements Serializable{
     @Column(name = "qr_code")
     private String qrCode;
 
-    @Column(name = "describe_score")
-    private String describeScore;
-
-    @Column(name = "delivery_speed_score")
-    private String deliverySpeedScore;
-
-    @Column(name = "service_manner_score")
-    private String serviceMannerScore;
+    @Column(name = "average_score")
+    private String averageScore;
 
     @Column(name = "quantity")
     private String quantity;
@@ -192,30 +186,6 @@ public class Goods implements Serializable{
         this.qrCode = qrCode;
     }
 
-    public String getDescribeScore() {
-        return describeScore;
-    }
-
-    public void setDescribeScore(String describeScore) {
-        this.describeScore = describeScore;
-    }
-
-    public String getDeliverySpeedScore() {
-        return deliverySpeedScore;
-    }
-
-    public void setDeliverySpeedScore(String deliverySpeedScore) {
-        this.deliverySpeedScore = deliverySpeedScore;
-    }
-
-    public String getServiceMannerScore() {
-        return serviceMannerScore;
-    }
-
-    public void setServiceMannerScore(String serviceMannerScore) {
-        this.serviceMannerScore = serviceMannerScore;
-    }
-
     public String getQuantity() {
         return quantity;
     }
@@ -262,5 +232,13 @@ public class Goods implements Serializable{
 
     public void setGoodsImagesSet(Set<GoodsImage> goodsImagesSet) {
         this.goodsImagesSet = goodsImagesSet;
+    }
+
+    public String getAverageScore() {
+        return averageScore;
+    }
+
+    public void setAverageScore(String averageScore) {
+        this.averageScore = averageScore;
     }
 }

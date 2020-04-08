@@ -14,6 +14,19 @@ public class GoodsImage {
     @Column(name = "image_url")
     private String imageUrl;
 
+    @Column(name = "goods_code")
+    private String goodsCode;
+
+    private Goods goods;
+
+    public Goods getGoods() {
+        return goods;
+    }
+
+    public void setGoods(Goods goods) {
+        this.goods = goods;
+    }
+
     public long getId() {
         return id;
     }
@@ -28,5 +41,13 @@ public class GoodsImage {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getGoodsCode() {
+        return goodsCode;
+    }
+
+    public void setGoodsCode(String goodsCode) {
+        this.goodsCode = goodsCode;
     }
 }
